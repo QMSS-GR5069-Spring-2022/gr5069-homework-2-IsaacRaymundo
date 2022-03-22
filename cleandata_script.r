@@ -34,7 +34,8 @@ eie$degree_t2 <- degree(xmg)
 eie$rel_strength_t1 <- rowMeans(eie1[,1:32],na.rm=T)
 eie$rel_strength_t2 <- rowMeans(eie2[,1:32],na.rm=T)
 
-#calculate another degree time 2 variable that is more conservative (0 means at most know of the person, 1 means at least have met the person)
+#calculate another degree time 2 variable that is more conservative 
+#0 means at most know of the person, 1 means at least have met the person
 #use this variable for exploratory analysis
 eie2_degree_r <- ifelse(eie2>1,1,0)
 xmg=graph.adjacency(as.matrix(eie2_degree_r),mode="directed",weighted=NULL,diag = F) 
