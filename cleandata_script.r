@@ -6,6 +6,7 @@ library(tidyverse)
 
 #load data, this dataset contains attributes
 eie <- read.table("https://web.archive.org/web/20200506190927/http://moreno.ss.uci.edu/eies_attribute.dat",skip = 41,nrow=32)
+
 #rename columns to match attributes they represent
 eie = dplyr::rename(eie,c( "Citations" = "V1" , "Discipline"="V2" ))
 
@@ -22,7 +23,6 @@ eie$degree_t1 <- degree(xmg)
 
 #read data from time point 2
 eie2 <- read.table("https://web.archive.org/web/20200506190922/http://moreno.ss.uci.edu/eies.dat", skip=106,nrow=32)
-
 
 eie2_degree <- ifelse(eie2>0,1,0)
 xmg=graph.adjacency(as.matrix(eie2_degree),mode="directed",weighted=NULL,diag = F)
