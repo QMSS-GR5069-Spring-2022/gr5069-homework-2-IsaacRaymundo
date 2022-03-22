@@ -19,3 +19,5 @@ m5 <- lm(Citations~degree_t2*rel_strength_t2 + Discipline,eie);summary(m5)
 
 #with conservative degree measure
 m6 <- lm(Citations~degree_t2_r*rel_strength_t2 + Discipline,eie);summary(m6)
+
+#include descriptions of what the results mean
