@@ -1,6 +1,6 @@
 # Databricks notebook source
 #read data
-
+#use different names for different models even if in different files to avoid confusion
 eie <- read.csv("https://raw.githubusercontent.com/QMSS-GR5069-Spring-2022/gr5069-homework-2-IsaacRaymundo/main/SocialNetworksData_clean.csv")
 
 #run model to test if degree at time 2 predicts citations
