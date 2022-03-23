@@ -4,12 +4,6 @@ library(igraph)
 library(dplyr)
 library(tidyverse)
 
-<<<<<<< Remy's-Feedback-3
-
-#rename dataframe to be user friendly
-
->>>>>>> main
-
 #load data, this dataset contains attributes
 eie <- read.table("https://web.archive.org/web/20200506190927/http://moreno.ss.uci.edu/eies_attribute.dat",skip = 41,nrow=32)
 #rename columns to match attributes they represent
